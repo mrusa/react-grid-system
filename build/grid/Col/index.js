@@ -61,7 +61,7 @@ var Col = function (_React$Component) {
       });
       return _react2.default.createElement(
         'div',
-        { style: style },
+        { style: style, className: _this.props.className },
         _this.props.children
       );
     }, _temp), _possibleConstructorReturn(_this, _ret);
@@ -108,7 +108,8 @@ Col.propTypes = {
   /**
    * Optional styling
    */
-  style: _react2.default.PropTypes.objectOf(_react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.string]))
+  style: _react2.default.PropTypes.objectOf(_react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.string])),
+  className: _react2.default.PropTypes.string
 };
 Col.contextTypes = {
   phone: _react2.default.PropTypes.bool,

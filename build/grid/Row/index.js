@@ -41,7 +41,7 @@ var Row = function (_React$Component) {
       });
       return _react2.default.createElement(
         'div',
-        { style: style },
+        { style: style, className: _this.props.className },
         _this.props.children,
         _react2.default.createElement(
           'div',
@@ -67,7 +67,8 @@ Row.propTypes = {
   /**
    * Optional styling
    */
-  style: _react2.default.PropTypes.objectOf(_react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.string]))
+  style: _react2.default.PropTypes.objectOf(_react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.string])),
+  className: _react2.default.PropTypes.string
 };
 Row.contextTypes = {
   gutterWidth: _react2.default.PropTypes.number
