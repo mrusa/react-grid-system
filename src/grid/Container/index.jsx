@@ -24,6 +24,7 @@ export default class Container extends React.Component {
          React.PropTypes.string,
        ])
      ),
+     className: React.PropTypes.string,
   };
 
   static contextTypes = {
@@ -64,7 +65,7 @@ export default class Container extends React.Component {
       moreStyle: this.props.style,
     });
     return (
-      <div style={style}>
+      <div style={style} className={this.props.className}>
         {this.props.children}
         <span style={getAfterStyle()} />
       </div>

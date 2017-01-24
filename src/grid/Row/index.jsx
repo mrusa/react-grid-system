@@ -18,6 +18,7 @@ export default class Row extends React.Component {
          React.PropTypes.string,
        ])
      ),
+     className: React.PropTypes.string,
   };
 
   static contextTypes = {
@@ -30,7 +31,7 @@ export default class Row extends React.Component {
       moreStyle: this.props.style,
     });
     return (
-      <div style={style}>
+      <div style={style} className={this.props.className}>
         {this.props.children}
         <div style={getAfterStyle()}><span style={getAfterContentStyle()}>&nbsp;</span></div>
       </div>
